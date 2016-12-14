@@ -1,0 +1,16 @@
+[
+{
+  "modid": "mysticmod",
+  "name": "Mystic Mod",
+  "description": "Collection of tweaks for the Mystic Minecraft server",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["Gareth Coles"],
+  "credits": "",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
