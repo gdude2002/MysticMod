@@ -72,6 +72,27 @@ public class Recipes {
         );
 
         // endregion
+        // region: Half-coins (breaking)
+
+        GameRegistry.addShapelessRecipe(
+                new ItemStack(ModItems.bronzePokecoin, 4),
+
+                ModItems.silverPokecoinHalf
+        );
+
+        GameRegistry.addShapelessRecipe(
+                new ItemStack(ModItems.silverPokecoin, 4),
+
+                ModItems.goldPokecoinHalf
+        );
+
+        GameRegistry.addShapelessRecipe(
+                new ItemStack(ModItems.goldPokecoin, 4),
+
+                ModItems.platinumPokecoinHalf
+        );
+
+        //region
         // region: Downcrafting
 
         // Platinum -> Gold
