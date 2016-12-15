@@ -6,7 +6,7 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class Recipes {
     public static void registerRecipes() {
-        // Upcrafting
+        // region: Upcrafting
 
         // Bronze -> Silver
         GameRegistry.addRecipe(
@@ -26,7 +26,53 @@ public class Recipes {
                 "###", "# #", "###", '#', ModItems.goldPokecoin
         );
 
-        // Downcrafting
+        // endregion
+        // region: Half-coins (creation)
+
+        GameRegistry.addShapelessRecipe(
+                new ItemStack(ModItems.silverPokecoinHalf, 1),
+
+                ModItems.bronzePokecoin, ModItems.bronzePokecoin,
+                ModItems.bronzePokecoin, ModItems.bronzePokecoin
+        );
+
+        GameRegistry.addShapelessRecipe(
+                new ItemStack(ModItems.goldPokecoinHalf, 1),
+
+                ModItems.silverPokecoin, ModItems.silverPokecoin,
+                ModItems.silverPokecoin, ModItems.silverPokecoin
+        );
+
+        GameRegistry.addShapelessRecipe(
+                new ItemStack(ModItems.platinumPokecoinHalf, 1),
+
+                ModItems.goldPokecoin, ModItems.goldPokecoin,
+                ModItems.goldPokecoin, ModItems.goldPokecoin
+        );
+
+        // endregion
+        // region: Half-coins (merging)
+
+        GameRegistry.addShapelessRecipe(
+                new ItemStack(ModItems.silverPokecoin, 1),
+
+                ModItems.silverPokecoinHalf, ModItems.silverPokecoinHalf
+        );
+
+        GameRegistry.addShapelessRecipe(
+                new ItemStack(ModItems.goldPokecoin, 1),
+
+                ModItems.goldPokecoinHalf, ModItems.goldPokecoinHalf
+        );
+
+        GameRegistry.addShapelessRecipe(
+                new ItemStack(ModItems.platinumPokecoin, 1),
+
+                ModItems.platinumPokecoinHalf, ModItems.platinumPokecoinHalf
+        );
+
+        // endregion
+        // region: Downcrafting
 
         // Platinum -> Gold
         GameRegistry.addShapelessRecipe(
@@ -46,10 +92,14 @@ public class Recipes {
                 ModItems.silverPokecoin
         );
 
-        // Saddle recipe
+        // endregion
+        // region: Other recipes
+
         GameRegistry.addRecipe(
                 new ItemStack(Items.SADDLE, 1),
                 "LLL", "I I", "   ", 'L', Items.LEATHER , 'I', Items.IRON_INGOT
         );
+
+        // endregion
     }
 }

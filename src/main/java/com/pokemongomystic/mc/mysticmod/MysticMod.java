@@ -12,7 +12,7 @@ import org.apache.logging.log4j.Logger;
 @Mod(modid = MysticMod.MODID, version = MysticMod.VERSION)
 public class MysticMod {
     public static final String MODID = "mysticmod";
-    public static final String VERSION = "0.0.1";
+    public static final String VERSION = "0.0.2";
     public static final CreativeTabs creativeTab = new MysticCreativeTab();
 
     @SidedProxy(serverSide = "com.pokemongomystic.mc.mysticmod.server.ServerProxy", clientSide = "com.pokemongomystic.mc.mysticmod.client.ClientProxy")
